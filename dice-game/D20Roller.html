@@ -26,25 +26,32 @@
       font-size: 1.5rem;
       color: #facc15;
     }
-    .button-group {
+   .button-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align buttons to the left inside the group */
+  align-items: flex-start;
   justify-content: center;
   margin: 2rem auto;
   width: fit-content;
+  gap: 1rem;
 }
-.button-group button {
-  width: 20px; /* Ensures all buttons have the same width */
-  text-align: left; /* Aligns text inside the button to the left */
-  margin: 0.5rem 0;
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option button {
+  width: 40px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
 }
   </style>
 </head>
 <body><img src="wizard.png" alt="Wizard conjuring fireball" width="300">
   <div id="result"></div>
-
-
   <h1>🎲 Choose Your Roll Style</h1>
   <!--
   <p><strong>A:</strong> Double your roll if it's 9 or lower</p>
@@ -57,23 +64,20 @@
     <button onclick="rollDice('C')">Option C</button>
   </div>
   -->
-  <div class="button-group">
-  <p>
-
+<div class="button-group">
+  <div class="option">
     <button onclick="chooseOption('A')">A</button>
-     Double your roll if it's 9 or lower
-  </p>
-  <p>
+    <span>Double your roll if it's 9 or lower</span>
+  </div>
+  <div class="option">
     <button onclick="chooseOption('B')">B</button>
-     Always roll 11-20, but 20 is less likely
-  </p>
-  <p>
+    <span>Always roll 11–20, but 20 is less likely</span>
+  </div>
+  <div class="option">
     <button onclick="chooseOption('C')">C</button>
-    Roll 1-20 normally, but 20 is slightly more likely
-  </p>
+    <span>Roll 1–20 normally, but 20 is slightly more likely</span>
+  </div>
 </div>
-  
-
 
   <script>
   function chooseOption(option) {
@@ -114,7 +118,5 @@
     }
   }
 </script>
-
-
 </body>
 </html>
