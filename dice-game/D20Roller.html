@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dice Game</title>
+  <title>20 Sided Dice Game</title>
   <style>
     body {
       background-color: rgb(2, 16, 37);
       color: rgb(222, 223, 165);
       font-family: 'courier', monospace;
-    font-size: 21px;
+      font-size: 21px;
       padding: 2rem;
       text-align: center;
     }
@@ -32,6 +32,7 @@
 
 
   <h1>🎲 Choose Your Roll Style</h1>
+  <!--
   <p><strong>A:</strong> Double your roll if it's 9 or lower</p>
   <p><strong>B:</strong> Always roll 11–20, but 20 is less likely</p>
   <p><strong>C:</strong> Roll 1–20 normally, but 20 is slightly more likely</p>
@@ -41,10 +42,29 @@
     <button onclick="rollDice('B')">Option B</button>
     <button onclick="rollDice('C')">Option C</button>
   </div>
-
-  <div id="result"></div>
+  -->
+  <div>
+  <p>
+    A: Double your roll if it's 9 or lower
+    <button onclick="chooseOption('A')">Choose A</button>
+  </p>
+  <p>
+    B: Always roll 11–20, but 20 is less likely
+    <button onclick="chooseOption('B')">Choose B</button>
+  </p>
+  <p>
+    C: Roll 1–20 normally, but 20 is slightly more likely
+    <button onclick="chooseOption('C')">Choose C</button>
+  </p>
+</div>
+  
+<div id="result"></div>
 
   <script>
+  function chooseOption(option) {
+    rollDice(option);
+  }
+
   function rollDice(option) {
     let roll;
 
@@ -79,6 +99,7 @@
     }
   }
 </script>
+
 
 </body>
 </html>
