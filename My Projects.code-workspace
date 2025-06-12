@@ -1,14 +1,18 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../20dRoller"
-		},
-		{
-			"path": "../../Dice-Web-Game"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../20dRoller"
+    },
+    {
+      "path": "../../Dice-Web-Game"
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "editorGhostText.foreground": "#FFA500"
+    }
+  }
 }
