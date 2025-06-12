@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Game</title>
+  <style>
+    body {
+      background-color: rgb(2, 16, 37);
+      color: rgb(222, 223, 165);
+      font-family: 'courier', monospace;
+    font-size: 21px;
+      padding: 2rem;
+      text-align: center;
+    }
+    button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #facc15;
+    }
+  </style>
+</head>
+<body><img src="wizard.png" alt="Wizard conjuring fireball" width="300">
+
+
+  <h1>🎲 Choose Your Roll Style</h1>
+  <p><strong>A:</strong> Double your roll if it's 9 or lower</p>
+  <p><strong>B:</strong> Always roll 11–20, but 20 is less likely</p>
+  <p><strong>C:</strong> Roll 1–20 normally, but 20 is slightly more likely</p>
+
+  <div>
+    <button onclick="rollDice('A')">Option A</button>
+    <button onclick="rollDice('B')">Option B</button>
+    <button onclick="rollDice('C')">Option C</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+  function rollDice(option) {
+    let roll;
+
+    if (option === 'A') {
+      roll = Math.floor(Math.random() * 20) + 1;
+      if (roll <= 9) {
+        roll *= 2;
+      }
+
+    } else if (option === 'B') {
+      const weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5]; // 11–20
+      const range = Array.from({ length: 10 }, (_, i) => i + 11);
+      roll = weightedRandom(range, weights);
+
+    } else if (option === 'C') {
+      const weights = Array(19).fill(1).concat(2); // 1–20 with 20 more likely
+      const range = Array.from({ length: 20 }, (_, i) => i + 1);
+      roll = weightedRandom(range, weights);
+    }
+
+    document.getElementById('result').innerText = `You rolled a ${roll}!`;
+  }
+
+  function weightedRandom(values, weights) {
+    const total = weights.reduce((a, b) => a + b, 0);
+    const rand = Math.random() * total;
+    let sum = 0;
+
+    for (let i = 0; i < values.length; i++) {
+      sum += weights[i];
+      if (rand < sum) return values[i];
+    }
+  }
+</script>
+
+</body>
+</html>
