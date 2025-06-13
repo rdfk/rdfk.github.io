@@ -26,7 +26,8 @@
       font-size: 1.5rem;
       color: #facc15;
     }
-   .button-group {
+
+.button-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -48,10 +49,29 @@
   font-size: 1rem;
   text-align: center;
 }
-  </style>
+.result-box {
+  display: none;
+  background-color: #1e293b;
+  border: 2px solid #facc15;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px #facc15;
+}
+.center-image {
+  display: block;
+  margin: 0 auto;
+}
+</style>
 </head>
-<body><img src="wizard.png" alt="Wizard conjuring fireball" width="300">
-  <div id="result"></div>
+<body><img src="wizard.png" alt="Wizard conjuring fireball" width="300" class="center-image">
+<!--This is where the score is displayed-->
+  <div id="result" class="result-box"></div>
+
   <h1>🎲 Choose Your Roll Style</h1>
 <div class="button-group">
   <div class="option">
@@ -74,38 +94,59 @@
   }
 
   function rollDice(option) {
-    let roll;
+  let playerRoll;
 
-    if (option === 'A') {
-      roll = Math.floor(Math.random() * 20) + 1;
-      if (roll <= 9) {
-        roll *= 2;
-      }
-
-    } else if (option === 'B') {
-      const weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5]; // 11–20
-      const range = Array.from({ length: 10 }, (_, i) => i + 11);
-      roll = weightedRandom(range, weights);
-
-    } else if (option === 'C') {
-      const weights = Array(19).fill(1).concat(2); // 1–20 with 20 more likely
-      const range = Array.from({ length: 20 }, (_, i) => i + 1);
-      roll = weightedRandom(range, weights);
+  // Player's roll logic
+  if (option === 'A') {
+    playerRoll = Math.floor(Math.random() * 20) + 1;
+    if (playerRoll <= 9) {
+      playerRoll *= 2;
     }
 
-    document.getElementById('result').innerText = `You rolled a ${roll}!`;
+  } else if (option === 'B') {
+    const weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5]; // 11–20
+    const range = Array.from({ length: 10 }, (_, i) => i + 11);
+    playerRoll = weightedRandom(range, weights);
+
+  } else if (option === 'C') {
+    const weights = Array(19).fill(1).concat(2); // 1–20 with 20 more likely
+    const range = Array.from({ length: 20 }, (_, i) => i + 1);
+    playerRoll = weightedRandom(range, weights);
   }
 
-  function weightedRandom(values, weights) {
-    const total = weights.reduce((a, b) => a + b, 0);
-    const rand = Math.random() * total;
-    let sum = 0;
+  // Computer's roll (same as Option C logic)
+  const compWeights = Array(19).fill(1).concat(2);
+  const compRange = Array.from({ length: 20 }, (_, i) => i + 1);
+  const computerRoll = weightedRandom(compRange, compWeights);
 
-    for (let i = 0; i < values.length; i++) {
-      sum += weights[i];
-      if (rand < sum) return values[i];
-    }
+  // Determine outcome
+  let outcome;
+  if (playerRoll > computerRoll) {
+    outcome = "You win!";
+  } else if (playerRoll < computerRoll) {
+    outcome = "Computer wins!";
+  } else {
+    outcome = "It's a tie!";
   }
+
+  // Display result
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').innerHTML =
+  `You rolled a ${playerRoll}.<br>` +
+  `Computer rolled a ${computerRoll}.<br><br><strong>${outcome}</strong>`;
+}
+// Weighted roll logic
+function weightedRandom(values, weights) {
+  const total = weights.reduce((a, b) => a + b, 0);
+  const rand = Math.random() * total;
+  let sum = 0;
+
+  for (let i = 0; i < values.length; i++) {
+    sum += weights[i];
+    if (rand < sum) return values[i];
+  }
+}
+
 </script>
 </body>
 </html>
