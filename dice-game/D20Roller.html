@@ -6,13 +6,16 @@
   <title>20 Sided Dice Game</title>
   <style>
     body {
-      background-color: rgb(2, 16, 37);
-      color: rgb(222, 223, 165);
-      font-family: 'courier', monospace;
-      font-size: 21px;
-      padding: 2rem;
-      text-align: center;
-    }
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: rgb(222, 223, 165);
+    font-family: 'courier', monospace;
+    font-size: 21px;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
     button {
       margin: 0.5rem;
       padding: 0.75rem 1.5rem;
@@ -66,9 +69,37 @@
   display: block;
   margin: 0 auto;
 }
+
+.stars {
+  width: 2px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+  }
 </style>
 </head>
-<body><img src="wizard2.png" alt="Wizard facing player" width="300" class="center-image">
+<body>
+   <!-- JavaScript to generate stars -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.classList.add('stars');
+        star.style.top = Math.random() * window.innerHeight + 'px';
+        star.style.left = Math.random() * window.innerWidth + 'px';
+        star.style.animationDuration = (1 + Math.random() * 2) + 's';
+        document.body.appendChild(star);
+      }
+    });
+  </script>
+  <img src="wizard2.png" alt="Wizard facing player" width="300" class="center-image">
 <!--This is where the score is displayed-->
   <div id="result" class="result-box"></div>
 
