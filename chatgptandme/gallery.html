@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="AI Art Gallery by Richard Frake Jr.">
+  <meta name="keywords" content="AI Art, Gallery, Prompt, HTML, CSS">
+  <meta name="author" content="Richard Frake Jr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Art Gallery</title>
+  <style>
+    /* Your existing styles here */
+    body {
+      background-color: rgb(2, 16, 37);
+      color: rgb(222, 223, 165);
+      font-family: courier;
+      font-size: 21px;
+      word-wrap: break-word;
+      line-height: 25px;
+    }
+    .whtblkctrst {
+      color: black;
+      background-color: white;
+    }
+    a {
+      color: gray;
+    }
+    a:hover {
+      color: red;
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: 800;
+    }
+
+    /* Gallery-specific styles */
+    #gallery {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .prompt {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      font-style: italic;
+    }
+  </style>
+</head>
