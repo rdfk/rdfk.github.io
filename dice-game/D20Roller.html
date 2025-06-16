@@ -79,6 +79,19 @@ a {
 a:hover {
   color: #a3e635;
 }
+.back-button {
+  display: inline-block;
+  font-size: 16px;
+  color: gray;
+  text-decoration: none;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+  .back-button:hover {
+  color: #a3e635;
+}
 .stars {
   width: 2px;
   height: 2px;
@@ -94,6 +107,10 @@ a:hover {
 </style>
 </head>
 <body>
+  
+<div style="text-align: left; margin-left: 2rem; margin-bottom: 1rem;">
+<a href="index.html" class="back-button">&#8592; Back</a>
+</div>
    <!-- JavaScript to generate stars -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
