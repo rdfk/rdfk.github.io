@@ -22,6 +22,14 @@
             background-position: top center;
             height: 325px;
         }
+         .footer {
+            background-image: url('images/footer.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto; /* Maintain width, auto height */
+            ackground-position: top center; /* Show top part of image */
+            height: 200px;
+            overflow: hidden; /* Ensures anything outside this box gets clipped */
+}
 
         .banner h1 {
             background-color: rgba(255, 255, 255, 0.7);
@@ -29,6 +37,7 @@
             font-size: 2.5rem;
             border-radius: 10px;
         }
+
         h4 {
             font-style: italic;
             font-weight: normal;
@@ -99,12 +108,18 @@
     </div>
     
     <div class="gallery">
-        <img id="mainImage" src="images/AngelGarden.png" alt="Angel tending to rose garden" class="main-image">
+        <img id="mainImage" src="images/IMG_1574.JPEG" alt="Default" class="main-image">
         <div class="thumbnails">
             <img src="images/IMG_1574-thumb.JPEG" alt="Thumb1" onclick="showImage('images/IMG_1574.JPEG')">
             <img src="images/image10-thumb.JPG" alt="Thumb2" onclick="showImage('images/image10.JPG')">
             <img src="images/Image9-thumb.jpg" alt="Thumb3" onclick="showImage('images/Image9.jpg')">
         </div>
     </div>
+
+<footer>
+    <div class="footer">
+        
+    </div>
+</footer>
 </body>
 </html>
