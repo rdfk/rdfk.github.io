@@ -22,20 +22,32 @@
             background-position: top center;
             height: 325px;
         }
-         .footer {
-            background-image: url('images/footer.png');
-            background-repeat: no-repeat;
-            background-size: 100% auto; /* Maintain width, auto height */
-            ackground-position: top center; /* Show top part of image */
-            height: 200px;
-            overflow: hidden; /* Ensures anything outside this box gets clipped */
-}
-
-        .banner h1 {
+       .banner h1 {
             background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             font-size: 2.5rem;
             border-radius: 10px;
+        }
+        .footer {
+            background-image: url('images/footer.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: top center;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center; /* Vertically center */
+            justify-content: center; /* Horizontally center */
+        }
+
+        .footer h1 {
+            color: white;
+            font-size: 1.5em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Make text readable over image */
+            margin: 0;
+            font-style: italic;
         }
 
         h4 {
@@ -49,6 +61,7 @@
             max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
+            text-align: left;
         }
 
         .gallery {
@@ -118,7 +131,7 @@
 
 <footer>
     <div class="footer">
-        
+        <h1>Forever loved, forever missed</h1>
     </div>
 </footer>
 </body>
