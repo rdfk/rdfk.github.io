@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remembering Janice M. Schwaiger</title>
+    <meta name="description" content="A loving memorial page dedicated to the life and memory of Janice M. Schwaiger, who cherished peach roses and brought warmth to all who knew her.">
+    <meta name="keywords" content="Janice Schwaiger, Janice M. Schwaiger, memorial, obituary, tribute, peach roses">
+    <meta name="author" content="Richard Frake Jr">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #F9F3D2;
+            color: #333;
+        }
+
+        .banner {
+            background-image: url('images/TopBannercrop2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            height: 325px; /* adjust if needed */
+        }
+
+        .banner h1 {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            font-size: 2.5rem;
+            border-radius: 10px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .main-image {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid transparent;
+        }
+
+        .thumbnails img:hover {
+            border-color: #FFB6B6;
+        }
+    </style>
+    <script>
+        function showImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</head>
+<body>
+    <div class="banner">
+       <h1 style="display: none;">Remembering Janice M. Schwaiger</h1>
+    </div>
+
+    <div class="content">
+        <h2>In Loving Memory of Janice M. Schwaiger</h2>
+
+        <p>This page is dedicated to the memory of my grandmother, Janice M. Schwaiger — a woman whose love, strength, and generosity shaped the person I am today.</p>
+
+        <p>From a young age, she took me in and raised me as her own, giving me the stability, support, and unconditional love that only a truly selfless heart can offer. She always encouraged my interests, especially when it came to technology. My very first computer — a Packard Bell — was a gift from her, and she made sure I always had access to a computer as I grew. That early support set me on the path to pursuing the passions that still guide me.</p>
+
+        <p>This page stands in her honor — a tribute to the love, care, and unwavering dedication she showed me every day of her life. May it serve as a lasting reminder of her kind and nurturing spirit.</p>
+
+    </div>
+
+    <div class="gallery">
+        <img id="mainImage" src="images/IMG_1574.jpeg" alt="Main" class="main-image">
+        <div class="thumbnails">
+            <img src="images/IMG_1574-thumb.jpeg" alt="Thumb1" onclick="showImage('images/IMG_1574.jepg')">
+            <img src="images/image10-thumb.jpg" alt="Thumb2" onclick="showImage('images/image10.jpg')">
+            <img src="images/image9-thumb.jpg" alt="Thumb3" onclick="showImage('images/image9.jpg')">
+        </div>
+    </div>
+</body>
+</html>
