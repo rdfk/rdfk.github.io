@@ -92,12 +92,14 @@
             padding-bottom: 50px;
         }
 
-        .main-image {
-            width: 80%;
+       .main-image {
+            width: 100%;
             max-width: 450px;
-            max-height: 550px;
+            height: 550px; /* lock the height */
+            object-fit: contain;
             border-radius: 10px;
             margin-bottom: 15px;
+            display: block;
         }
 
         .thumbnails {
@@ -110,7 +112,7 @@
        .thumbnails img {
             width: 80px;
             height: 80px;
-            object-fit: contain;
+            object-fit: cover;
             cursor: pointer;
             border-radius: 5px;
             border: 2px solid transparent;
