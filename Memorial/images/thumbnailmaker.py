@@ -2,8 +2,8 @@ from PIL import Image
 import os
 
 # Folder where your full images are stored
-input_folder = r'G:\Coding Etc\TESTS\Memorial\images'
-output_folder = r'G:\Coding Etc\TESTS\Memorial\images'
+input_folder = r'G:\Coding Etc\TESTS'
+output_folder = r'G:\Coding Etc\TESTS'
 
 # Set your thumbnail size (width, height)
 thumbnail_size = (200, 200)
