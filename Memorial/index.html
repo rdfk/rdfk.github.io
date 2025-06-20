@@ -133,6 +133,18 @@
         .thumbnails img:hover {
             border-color: #FFB6B6;
         }
+
+        .banner h1,
+        .footer h1 {
+            font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive size */
+            text-align: center;
+            padding: 10px 20px;
+            word-break: break-word;
+            white-space: normal;
+            overflow-wrap: break-word;
+            margin: 0 auto;
+            max-width: 90%;
+        }
     </style>
     <script>
         function showImage(src) {
