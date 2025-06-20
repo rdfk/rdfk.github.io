@@ -133,6 +133,21 @@
             margin: 0 auto;
             max-width: 90%;
         }
+        .angeloval {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; /* optional: adds space above/below the image */
+
+        }
+        .angeloval img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid gold; /* You can change color and thickness */
+            border-radius: 50%;      /* This creates the oval wrap */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional soft shadow */
+        }
     </style>
     <script>
         function showImage(src) {
@@ -144,6 +159,9 @@
     <main>
     <div class="banner">
         <h1>Remembering<br>Janice M. Schwaiger</h1>
+    </div>
+    <div class="angeloval">
+        <img src="images/GardenAngelOval.png" alt="Angel in Rose Garden">
     </div>
     <div class="content">
         <h2>In Loving Memory of Janice M. Schwaiger</h2>
