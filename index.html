@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-
     <meta charset="UTF-8">
     <meta name="description" content="Coding Projects">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Richard Frake Jr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+
     <style>
       body {
         background-color: rgb(2, 16, 37);
@@ -17,86 +17,120 @@
         word-wrap: break-word;
         line-height: 25px;
       }
-      .whtblkctrst {
-        color: black;
-        background-color: white;
-      }
+
       a {
         color: gray;
       }
+
       a:hover {
         color: #a3e635;
       }
+
       h1 {
         font-size: 50px;
         font-weight: 800;
       }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .logo img {
+        width: clamp(120px, 18vw, 270px);
+        height: auto;
+      }
+
+      .aboutme {
+        margin-bottom: 2.5rem;
+      }
     </style>
+
   </head>
+
   <body>
     <main>
-      <div style="text-align: center;">
-        <div style="display: inline-block; text-align: left;">
-          <!-- span allows me to do inline styling - div lets me do block based styling -->
-          <h1>
-            <span class="whtblkctrst">RD</span>FK 
-            <span style="color: white; font-family: 'Segoe Script', cursive;">codes</span>
-          </h1>
-          <br/>
 
-          <h3>About me:</h3>
-          <p>
-            Hello, I'm excited to share my coding journey with you! I'm currently learning HTML, CSS, JavaScript, and Python.
-          </p>
-
-          <h3>Below are my current projects:</h3>
-          <ul>
-            <li>
-              Wrote a D&D 20 sided dice game in Python and made it available online by using JavaScript and HTML
-              <a href="/dice-game/D20Roller.html">D&D 20 Sided Dice Roller Game</a>
-            </li>
-            <li>
-              Created a gallery to showcase some of my AI-generated art
-              <a href="/chatgptandme/gallery.html">AI Art Gallery</a>
-            </li>
-            <li>
-              Created a memorial page dedicated to my Grandmother
-              <a href="/Memorial/index.html">Remebering Janice M. Schwaiger</a>
-            </li>
-            <li>
-              Developed a Python-based password generator that combines user input with randomized character logic to generate secure, 16-character passwords.
-              <a href="https://github.com/rdfk/PWgenFun">My password generator</a>
-            </li>
-            <li>
-              Created a website with links to services in Burlington County
-              <a href="https://rdfk.github.io/BurlCoHelp/">Burl Co Help</a>
-            </li>
-          </ul>
-
-          <br/>
-
-          <h3>Goals:</h3>
-          <ul>
-            <li>Learn HTML/CSS, create a website and make it interactive</li>
-            <li>Learn JavaScript</li>
-            <li>Learn how to use GitHub and Git</li>
-            <li>Learn Python (Currently reading through "Automate the boring stuff" by Al Sweigart)</li>
-          </ul>
-
-          <ul>
-            <li>Learn and follow coding standards for formatting and compatibility across popular platforms and devices</li>
-            <li>Write code that connects my passion for technology with my other interests and hobbies</li>
-          </ul>
-        </div>
+      <div class="logo">
+        <img src="rdfklogotrans.png" alt="RDFK Codes Logo">
       </div>
+
+      <div class="aboutme">
+        <h3>About me:</h3>
+
+        <p>
+          Hey, thanks for stopping by. My name is Rich, and I'm a tech enthusiast. I hope that by visiting this page, you'll get to know me and see some of the projects that I'm working on.
+        </p>
+
+        <p>
+          My philosophy for technology is that it should empower the user and make life simpler by automating monotonous tasks, and increase efficiency. I would like hardware to be upgradable and repairable; to reduce E-Waste and to keep technology more affordable for all. Especially those who struggle financially.
+        </p>
+
+        <p>
+          I'm starting school in January 2026 for Electrical Engineering with a focus on Computer Technology at the ripe age of 44. I hope that I can take the skills that I learn at RCBC and put them to use in creating electronics and writing code that benefits people and makes their lives easier without removing our autonomy. I hope to have a large focus on creating hardware and code that helps make life simpler, and safer.
+        </p>
+
+        <p>
+          My current areas of focus are web development, Python automation and scripting, and learning the fundamentals of electronics and electronics repair. My hobbies include taking care of my dogs and messing around with SDR to find all different types of signals being broadcast around my area.
+        </p>
+      </div>
+      <br/>
+      <h3>Below are my current projects:</h3>
+
+      <ul>
+        <li>
+          Wrote a D&D 20 sided dice game in Python and made it available online by using JavaScript and HTML
+          <a href="/dice-game/D20Roller.html">D&D 20 Sided Dice Roller Game</a>
+        </li>
+
+        <li>
+          Created a gallery to showcase some of my AI-generated art
+          <a href="/chatgptandme/gallery.html">AI Art Gallery</a>
+        </li>
+
+        <li>
+          Created a memorial page dedicated to my Grandmother
+          <a href="/Memorial/index.html">Remembering Janice M. Schwaiger</a>
+        </li>
+
+        <li>
+          Developed a Python-based password generator that combines user input with randomized character logic to generate secure, 16-character passwords.
+          <a href="https://github.com/rdfk/PWgenFun">My password generator</a>
+        </li>
+
+        <li>
+          Created a website with links to services in Burlington County
+          <a href="https://rdfk.github.io/BurlCoHelp/">Burl Co Help</a>
+        </li>
+      </ul>
+
+      <br/>
+
+      <h3>Goals:</h3>
+
+      <ul>
+        <li>Learn HTML/CSS, create a website and make it interactive</li>
+        <li>Learn JavaScript</li>
+        <li>Learn how to use GitHub and Git</li>
+        <li>Learn Python (Currently reading through "Automate the boring stuff" by Al Sweigart)</li>
+      </ul>
+
+      <ul>
+        <li>Learn and follow coding standards for formatting and compatibility across popular platforms and devices</li>
+        <li>Write code that connects my passion for technology with my other interests and hobbies</li>
+      </ul>
+
     </main>
 
     <footer>
       <div style="text-align: center; font-size: 16px; color: gray; padding: 10px 0;">
         <hr style="width: 50%; margin: 10px auto; border-color: #444;">
         <p>Contact: <a href="mailto:rdfkcodes@gmail.com">rdfkcodes@gmail.com</a></p>
-        <p>Updated: <i>August 3, 2025</i></p>
+        <p>Updated: <i>November 29, 2025</i></p>
       </div>
     </footer>
+
   </body>
 </html>
