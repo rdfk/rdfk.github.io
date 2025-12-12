@@ -1,98 +1,129 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Coding Projects">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Richard Frake Jr">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
 
-    <style>
-      body {
-        background-color: rgb(2, 16, 37);
-        color: rgb(222, 223, 165);
-        font-family: courier;
-        font-size: 21px;
-        word-wrap: break-word;
-        line-height: 25px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Coding Projects">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Richard Frake Jr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
 
-      a {
-        color: gray;
-      }
+  <style>
+    body {
+      background-color: rgb(2, 16, 37);
+      color: rgb(222, 223, 165);
+      font-family: courier;
+      font-size: 21px;
+      word-wrap: break-word;
+      line-height: 25px;
+    }
 
-      a:hover {
-        color: #a3e635;
-      }
+    a {
+      color: rgb(25, 126, 220);
+    }
 
-      h1 {
-        font-size: 50px;
-        font-weight: 800;
-      }
+    a:hover {
+      color: #a3e635;
+    }
 
-      .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-      }
+    h1 {
+      font-size: 50px;
+      font-weight: 800;
+    }
 
-      .logo img {
-        width: clamp(120px, 18vw, 270px);
-        height: auto;
-      }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
 
-      /*.aboutme {
-        margin-bottom: 2.5rem;
-      }*/
-      /* 2. Create the "Card" look for your sections */
-      .aboutme, .projects, .goals {
-        background-color: rgb(4, 23, 52);  /* White box */
-        padding: 25px;              /* Space inside the box */
-        margin-bottom: 20px;        /* Space between the boxes */
-        border-radius: 10px;        /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* A subtle 3D shadow effect */
-      }
-      main {
-        max-width: 800px; /* 1. Sets a limit on how wide the text block can get */
-        margin: 0 auto;   /* 2. Centers that block in the middle of the screen */
-        text-align: justify; /* 3. Ensures the text inside stays aligned to the left */
-        padding: 0 20px;  /* 4. Adds safety space so text doesn't touch mobile screen edges */
-      }
-    </style>
+    .logo img {
+      width: clamp(120px, 18vw, 270px);
+      height: auto;
+    }
 
-  </head>
+    .aboutme,
+    .projects,
+    .goals {
+      background-color: rgb(4, 23, 52);
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-  <body>
-    <main>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+      padding: 0 20px;
+    }
 
-      <div class="logo">
-        <img src="rdfklogo.png" alt="RDFK Codes Logo">
-      </div>
+    nav ul {
+      list-style: none;
+      /* Removes the default bullet points */
+      padding: 0;
+      margin: 0 auto 20px auto;
+      /* Centers and adds space below */
 
-      <div class="aboutme">
-        <h3>About me:</h3>
+      display: flex;
+      /* Makes the list items go horizontal */
+      justify-content: center;
+      /* Centers the links */
+      gap: 25px;
+      /* NEW: A simple way to add space between links! */
+    }
+  </style>
 
-        <p>
-          Hey, thanks for stopping by. My name is Rich, and I'm a tech enthusiast. I hope that by visiting this page, you'll get to know me and see some of the projects that I'm working on.
-        </p>
+</head>
 
-        <p>
-          My philosophy for technology is that it should empower the user and make life simpler by automating monotonous tasks, and increase efficiency. I would like hardware to be upgradable and repairable; to reduce E-Waste and to keep technology more affordable for all. Especially those who struggle financially.
-        </p>
+<body>
+  <main>
 
-        <p>
-          I'm starting school in January 2026 for Electrical Engineering with a focus on Computer Technology at the ripe age of 44. I hope that I can take the skills that I learn at RCBC and put them to use in creating electronics and writing code that benefits people and makes their lives easier without removing our autonomy. I hope to have a large focus on creating hardware and code that helps make life simpler, and safer.
-        </p>
+    <div class="logo">
+      <img src="rdfklogo.png" alt="RDFK Codes Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="https://github.com/rdfk" target="_blank">GitHub</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+    <div class="aboutme" id="aboutme">
+      <h3>About me:</h3>
 
-        <p>
-          My current areas of focus are web development, Python automation and scripting, and learning the fundamentals of electronics and electronics repair. My hobbies include taking care of my dogs and messing around with SDR to find all different types of signals being broadcast around my area.
-        </p>
-      </div>
-      <br/>
+      <p>
+        Hey, thanks for stopping by. My name is Rich, and I'm a tech enthusiast. I hope that by visiting this page,
+        you'll get to know me and see some of the projects that I'm working on.
+      </p>
 
-      <div class="projects">
+      <p>
+        My philosophy for technology is that it should empower the user and make life simpler by automating monotonous
+        tasks, and increase efficiency. I would like hardware to be upgradable and repairable; to reduce E-Waste and to
+        keep technology more affordable for all. Especially those who struggle financially.
+      </p>
+
+      <p>
+        I'm starting school in January 2026 for Electrical Engineering with a focus on Computer Technology at the ripe
+        age of 44. I hope that I can take the skills that I learn at RCBC and put them to use in creating electronics
+        and writing code that benefits people and makes their lives easier without removing our autonomy. I hope to have
+        a large focus on creating hardware and code that helps make life simpler, and safer.
+      </p>
+
+      <p>
+        My current areas of focus are web development, Python automation and scripting, and learning the fundamentals of
+        electronics and electronics repair. My hobbies include taking care of my dogs and messing around with SDR to
+        find all different types of signals being broadcast around my area.
+      </p>
+    </div>
+    <br />
+
+    <div class="projects" id="projects">
 
       <h3>Below are my current projects:</h3>
 
@@ -113,7 +144,8 @@
         </li>
 
         <li>
-          Developed a Python-based password generator that combines user input with randomized character logic to generate secure, 16-character passwords.
+          Developed a Python-based password generator that combines user input with randomized character logic to
+          generate secure, 16-character passwords.
           <a href="https://github.com/rdfk/PWgenFun">My password generator</a>
         </li>
 
@@ -122,9 +154,9 @@
           <a href="https://rdfk.github.io/BurlCoHelp/">Burl Co Help</a>
         </li>
       </ul>
-      </div>
-      <br/>
-      <div class="goals">
+    </div>
+    <br />
+    <div class="goals" id="goals">
 
       <h3>Goals:</h3>
 
@@ -138,16 +170,17 @@
         <li>Learn and follow coding standards for formatting and compatibility across popular platforms and devices</li>
         <li>Write code that connects my passion for technology with my other interests and hobbies</li>
       </ul>
-      </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <div style="text-align: center; font-size: 16px; color: gray; padding: 10px 0;">
-        <hr style="width: 50%; margin: 10px auto; border-color: #444;">
-        <p>Contact: <a href="mailto:rdfkcodes@gmail.com">rdfkcodes@gmail.com</a></p>
-        <p>Updated: <i>November 29, 2025</i></p>
-      </div>
-    </footer>
+  <footer id="contact">
+    <div style="text-align: center; font-size: 16px; color: gray; padding: 10px 0;">
+      <hr style="width: 50%; margin: 10px auto; border-color: #444;">
+      <p>Contact: <a href="mailto:rdfkcodes@gmail.com">rdfkcodes@gmail.com</a></p>
+      <p>Updated: <i>December 12, 2025</i></p>
+    </div>
+  </footer>
 
-  </body>
+</body>
+
 </html>
