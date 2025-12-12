@@ -10,72 +10,108 @@
   <title>Hello World</title>
 
   <style>
-    body {
-      background-color: rgb(2, 16, 37);
-      color: rgb(222, 223, 165);
-      font-family: courier;
-      font-size: 21px;
-      word-wrap: break-word;
-      line-height: 25px;
-      background-image: radial-gradient(circle at 1px 1px, rgba(163, 230, 53, 0.1) 1px, transparent 0);      background-size: 3px 3px;
-    }
+body {
+  background-color: rgb(2, 16, 37);
+  color: rgb(222, 223, 165);
+  font-family: courier;
+  font-size: 21px;
+  word-wrap: break-word;
+  line-height: 25px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(163, 230, 53, 0.1) 1px, transparent 0);
+  background-size: 3px 3px;
+  margin: 0; /* removes weird spacing on mobile */
+}
 
-    a {
-      color: rgb(25, 126, 220);
-    }
+a {
+  color: rgb(25, 126, 220);
+}
 
-    a:hover {
-      color: #a3e635;
-    }
+a:hover {
+  color: #a3e635;
+}
 
-    h1 {
-      font-size: 50px;
-      font-weight: 800;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
+.logo img {
+  width: clamp(120px, 18vw, 270px);
+  height: auto;
+}
 
-    .logo img {
-      width: clamp(120px, 18vw, 270px);
-      height: auto;
-    }
+/* Card boxes */
+.aboutme,
+.projects,
+.goals {
+  background-color: rgb(4, 23, 52);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .aboutme,
-    .projects,
-    .goals {
-      background-color: rgb(4, 23, 52);
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify;
-      padding: 0 20px;
-    }
+/* NAVIGATION — desktop */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
 
-    nav ul {
-      list-style: none;
-      /* Removes the default bullet points */
-      padding: 0;
-      margin: 0 auto 20px auto;
-      /* Centers and adds space below */
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap; /* desktop: keep it as one row */
+}
 
-      display: flex;
-      /* Makes the list items go horizontal */
-      justify-content: center;
-      /* Centers the links */
-      gap: 25px;
-      /* NEW: A simple way to add space between links! */
-    }
+/* NAV LINKS */
+nav ul li a {
+  white-space: nowrap; /* stops weird wrapping */
+  font-size: 20px;
+}
+
+/* ===== MOBILE IMPROVEMENTS ===== */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* Make the nav *wrap* cleanly */
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav ul li {
+    flex: 1 1 40%; /* 2–3 links per line depending on screen width */
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 8px 0;
+    font-size: 18px;
+  }
+
+  /* Reduce padding on content cards */
+  .aboutme, .projects, .goals {
+    padding: 18px;
+  }
+
+  /* Make the logo shrink more gently for tiny screens */
+  .logo img {
+    width: clamp(100px, 40vw, 200px);
+  }
+}
   </style>
 
 </head>
