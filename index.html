@@ -43,8 +43,22 @@
         height: auto;
       }
 
-      .aboutme {
+      /*.aboutme {
         margin-bottom: 2.5rem;
+      }*/
+      /* 2. Create the "Card" look for your sections */
+      .aboutme, .projects, .goals {
+        background-color: rgb(4, 23, 52);  /* White box */
+        padding: 25px;              /* Space inside the box */
+        margin-bottom: 20px;        /* Space between the boxes */
+        border-radius: 10px;        /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* A subtle 3D shadow effect */
+      }
+      main {
+        max-width: 800px; /* 1. Sets a limit on how wide the text block can get */
+        margin: 0 auto;   /* 2. Centers that block in the middle of the screen */
+        text-align: justify; /* 3. Ensures the text inside stays aligned to the left */
+        padding: 0 20px;  /* 4. Adds safety space so text doesn't touch mobile screen edges */
       }
     </style>
 
@@ -77,6 +91,9 @@
         </p>
       </div>
       <br/>
+
+      <div class="projects">
+
       <h3>Below are my current projects:</h3>
 
       <ul>
@@ -105,8 +122,9 @@
           <a href="https://rdfk.github.io/BurlCoHelp/">Burl Co Help</a>
         </li>
       </ul>
-
+      </div>
       <br/>
+      <div class="goals">
 
       <h3>Goals:</h3>
 
@@ -120,7 +138,7 @@
         <li>Learn and follow coding standards for formatting and compatibility across popular platforms and devices</li>
         <li>Write code that connects my passion for technology with my other interests and hobbies</li>
       </ul>
-
+      </div>
     </main>
 
     <footer>
