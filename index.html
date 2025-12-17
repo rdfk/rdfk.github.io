@@ -10,96 +10,99 @@
   <title>Hello World</title>
 
   <style>
-body {
-  background-color: rgb(2, 16, 37);
-  color: rgb(222, 223, 165);
-  font-family: courier;
-  font-size: 21px;
-  word-wrap: break-word;
-  line-height: 25px;
-  background-image: radial-gradient(circle at 1px 1px, rgba(163, 230, 53, 0.1) 1px, transparent 0);
-  background-size: 3px 3px;
-  margin: 0; /* removes weird spacing on mobile */
-}
+    body {
+      background-color: rgb(2, 16, 37);
+      color: rgb(222, 223, 165);
+      font-family: courier;
+      font-size: 21px;
+      word-wrap: break-word;
+      line-height: 25px;
+      background-image: radial-gradient(circle at 1px 1px, rgba(163, 230, 53, 0.1) 1px, transparent 0);
+      background-size: 3px 3px;
+      margin: 0;
+      /* removes weird spacing on mobile */
+    }
 
-a {
-  color: rgb(25, 126, 220);
-}
+    a {
+      color: rgb(25, 126, 220);
+    }
 
-a:hover {
-  color: #a3e635;
-}
+    a:hover {
+      color: #a3e635;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
 
-.logo img {
-  width: clamp(120px, 18vw, 270px);
-  height: auto;
-}
+    .logo img {
+      width: clamp(120px, 18vw, 270px);
+      height: auto;
+    }
 
-/* Card boxes */
-.aboutme,
-.projects,
-.goals {
-  background-color: rgb(4, 23, 52);
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    /* Card boxes */
+    .aboutme,
+    .projects,
+    .goals {
+      background-color: rgb(4, 23, 52);
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* NAVIGATION — desktop */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto 20px auto;
+    /* NAVIGATION — desktop */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 20px auto;
 
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: nowrap; /* desktop: keep it as one row */
-}
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: nowrap;
+      /* desktop: keep it as one row */
+    }
 
-/* NAV LINKS */
-nav ul li a {
-  white-space: nowrap; /* stops weird wrapping */
-  font-size: 20px;
-}
+    /* NAV LINKS */
+    nav ul li a {
+      white-space: nowrap;
+      /* stops weird wrapping */
+      font-size: 20px;
+    }
 
-/* ===== MOBILE IMPROVEMENTS ===== */
-@media (max-width: 600px) {
+    /* ===== MOBILE IMPROVEMENTS ===== */
+    @media (max-width: 600px) {
 
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 10px;
-  }
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+      }
 
-  nav ul li {
-    flex: 1 1 calc(50% - 20px);
-    text-align: center;
-  }
+      nav ul li {
+        flex: 1 1 calc(50% - 20px);
+        text-align: center;
+      }
 
-  nav ul li a {
-    display: block;
-    padding: 8px 0;
-    font-size: 18px;
-    white-space: normal;
-  }
-}
+      nav ul li a {
+        display: block;
+        padding: 8px 0;
+        font-size: 18px;
+        white-space: normal;
+      }
+    }
   </style>
 
 </head>
@@ -124,27 +127,23 @@ nav ul li a {
 
       <p>
         Hey, thanks for stopping by. My name is Rich, and I'm a tech enthusiast. I hope that by visiting this page,
-        you'll get to know me and see some of the projects that I'm working on.
+        you'll get to know me, and see some of the projects that I'm working on.
+
       </p>
 
       <p>
-        My philosophy for technology is that it should empower the user, and make life simpler by automating monotonous
-        tasks, and increase efficiency. I would like hardware to be upgradable and repairable; to reduce E-Waste and to
-        keep technology affordable for all, especially those who struggle financially.
-      </p>
+        I'm starting school in January, 2026 for Electrical Engineering with a focus on Computer Technology at the ripe
+        age of 44. I hope that I can take the skills that I learn at RCBC and put them to use in assembling/repairing
+        electronics and writing code.
 
-      <p>
-        I'm starting school in January 2026 for Electrical Engineering with a focus on Computer Technology at the ripe
-        age of 44. I hope that I can take the skills that I learn at RCBC and put them to use in creating electronics
-        and writing code that benefits people, and makes their lives easier. I hope to have a large focus on creating 
-        hardware and code that helps make life simpler, and safer.
       </p>
 
       <p>
         My current areas of focus are web development, Python automation and scripting, and learning the fundamentals of
-        electronics and electronics repair. My hobbies include taking care of my dogs and messing around with SDR to
-        find all different types of signals being broadcast around my area.
+        electronics and electronics repair. My hobbies include taking care of my dogs and messing around with
+        SDR(Software Defined Radio) to find all different types of signals being broadcast around my area.
       </p>
+
     </div>
     <br />
 
